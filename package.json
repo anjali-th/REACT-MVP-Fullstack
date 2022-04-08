@@ -1,0 +1,32 @@
+{
+  "name": "react-mvp-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:backend": "nodemon server.js",
+    "dev:frontend": "snowpack dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anjali-th/REACT-MVP-Fullstack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anjali-th/REACT-MVP-Fullstack/issues"
+  },
+  "homepage": "https://github.com/anjali-th/REACT-MVP-Fullstack#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15",
+    "snowpack": "^3.8.8"
+  }
+}

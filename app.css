@@ -1,16 +1,64 @@
-.action-btn {
-    width: 22px;
-    height: 22px;
-  }
-  
-  .counter > * + * {
-    margin-left: 4px;
-  }
-  
-  .counter-container {
-    margin-top: 8px;
-  }
-  
-  .counter-container > * + * {
-    margin-top: 4px;
-  }
+
+* {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.header{
+  color: #fff;
+  background-color:#1A374D;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu{
+  /* border: 1px solid #fff; */
+  width: 900px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+button{
+  font-size: 14px;
+  padding: 8px 20px;
+  margin: 0.5em;
+}
+
+
+.body{
+  /* margin-top: 4em; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.body-btn{
+  font-size: 20px;
+  padding: 8px 20px;
+  margin: 7em;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  /* display: flex; */
+ /* justify-content: center;
+ align-items: center; */
+}
+
+.footer{
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+}
+
+.footer p{
+  color: white;
+}

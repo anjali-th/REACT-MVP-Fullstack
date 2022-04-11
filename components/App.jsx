@@ -1,17 +1,34 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
+import Heading from "./Heading";
+import Footer from "./Footer";
+import Body from "./Body";
+import Card from "./Card";
 
-class App extends Component {
-  componentDidMount() {
-    fetch("http://localhost:3000/api/stuff", {
+function App(){
+
+  const [ result, setResult] = useState([]);// API data
+  const [ isCliked, setIsClicked] = useState(false);
+
+  function handleClick(){
+    setIsClicked(prevValue => !prevValue);
+  }
+  
+  useEffect(() => {
+    fetch("http://localhost:3000/workout", {
       mode: 'cors'
-    }).then((res) => res.text()).then(console.log)
-  }
+    })
+    .then((res) => res.json())
+    .then(data => setResult(data))     
+  });
 
-  render() {
-    return (
-      <div>Hi</div>
-    );
-  }
+  return (
+    <div>
+      <Heading/>
+      <Body showCard={handleClick}/>
+      {isCliked ? <Card/> : null}
+      <Footer/>
+    </div>
+  );
 }
 
 export default App;

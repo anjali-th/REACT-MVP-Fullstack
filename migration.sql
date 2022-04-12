@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS savedWorkout;
 DROP TABLE IF EXISTS workoutRoutine;
 
 CREATE TABLE workoutRoutine(
@@ -9,6 +10,18 @@ CREATE TABLE workoutRoutine(
     exercise3 TEXT,
     exercise4 TEXT,
     exercise5 TEXT
+);
+
+CREATE TABLE savedWorkout(
+    id SERIAL PRIMARY KEY,
+    type TEXT,
+    set TEXT,
+    exercise1 TEXT,
+    exercise2 TEXT,
+    exercise3 TEXT,
+    exercise4 TEXT,
+    exercise5 TEXT,
+    routineId INTEGER REFERENCES workoutRoutine(id)
 );
 
 INSERT INTO workoutRoutine (type, set, exercise1, exercise2, exercise3, exercise4, exercise5 ) VALUES ('upper','A', 'Barbell Bench Press 3 X 5','Incline Dumbell Bench Press 4 X 8', 'Barbell Row 4 X 8', 'Cable Rope Tricep Pushdown 3 X 15', 'Dumbell Rear Delt Lateral Raise 3 X 15');

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+
 
 function Card(props) {
-
-    // maybe add an "add" icon on each card, so that the user can add to their "saved workouts"
 
   return (
     <div className="body">
@@ -21,6 +21,7 @@ function Card(props) {
             <br />
             {item.exercise5}
           </p>
+          <button className='add-btn' onClick={()=>props.addWorkout(item)} type='submit'><AddCircleOutlineRoundedIcon/></button>
         </div>
       ))}
     </div>

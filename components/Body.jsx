@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import Card from "./Card";
 
-function Body(props) {
-
-    
+function Body(props) {    
 
   return (
     <div className="body">

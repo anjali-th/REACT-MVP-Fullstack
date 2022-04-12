@@ -7,25 +7,27 @@ import Card from "./Card";
 function App(){
 
   const [ result, setResult] = useState([]);// API data
-  const [ isCliked, setIsClicked] = useState(false);
+  const [ workoutType, setWorkoutType] = useState('upper')
 
-  function handleClick(){
-    setIsClicked(prevValue => !prevValue);
+  function handleClick(type){
+    setWorkoutType(() => type);
+    apiRequest(type);
   }
   
-  useEffect(() => {
-    fetch("http://localhost:3000/workout", {
+  function apiRequest(type){
+    fetch(`http://localhost:3000/workout/${type}`, {
       mode: 'cors'
     })
     .then((res) => res.json())
-    .then(data => setResult(data))     
-  });
-
+    .then(data => setResult(data))    
+    .catch(err => console.log('error'))
+  }
+  
   return (
     <div>
       <Heading/>
-      <Body showCard={handleClick}/>
-      {isCliked ? <Card/> : null}
+      <Body showCard={handleClick} />
+      <Card info={result}/>
       <Footer/>
     </div>
   );

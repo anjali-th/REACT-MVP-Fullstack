@@ -2,14 +2,22 @@
 * {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  
 }
 
 .header{
   color: #fff;
   background-color:#1A374D;
-  padding: 20px 0;
+  padding: 40px 0;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header h1{
+  font-size: xxx-large;
 }
 
 .menu{
@@ -20,40 +28,49 @@
   padding: 1em;
 }
 
-button{
+.menu button{
   font-size: 14px;
-  padding: 8px 20px;
+  /* padding: 8px 20px; */
   margin: 0.5em;
 }
 
 
 .body{
-  /* margin-top: 4em; */
+  margin-top: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative;
+  
+  /* position: relative; */
 }
 
 .body-btn{
-  font-size: 20px;
+  font-size: 45px;
   padding: 8px 20px;
-  margin: 7em;
+  margin: 5em 3em 1em 3em;
+
 }
+
+/* img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
 
 .card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: rgb(235, 252, 252);
   transition: 0.3s;
   width: 40%;
-  /* display: flex; */
- /* justify-content: center;
- align-items: center; */
+  margin-bottom: 2em;
+  padding: 1em;
 }
 
 .footer{
   background-color: black;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 2.5rem; 

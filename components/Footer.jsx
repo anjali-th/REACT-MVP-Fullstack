@@ -6,7 +6,7 @@ const year  = date.getFullYear();
 
 function Footer(){
     return <div className="footer">
-        <p>Workout Finder ©{year} </p>
+        <p>Workout Generator ©{year} </p>
     </div>
 }
 

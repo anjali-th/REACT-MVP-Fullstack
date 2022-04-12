@@ -21,7 +21,8 @@ function Card(props) {
             <br />
             {item.exercise5}
           </p>
-          <button className='add-btn' onClick={()=>props.addWorkout(item)} type='submit'><AddCircleOutlineRoundedIcon/></button>
+          <button className='add-btn' onClick={()=>props.addWorkout(item)}
+            type='submit'><AddCircleOutlineRoundedIcon/></button>
         </div>
       ))}
     </div>

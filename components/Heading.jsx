@@ -6,7 +6,13 @@ function Heading(props){
         <div><h1>WORKOUT GENERATOR</h1></div>
         <div className="menu">
         <button><a href="/">Home</a></button>
-        <button name='saved' onClick={(e)=>props.saved(e.target.name)} type="submit">Saved Workouts</button>
+        <button 
+        name='saved' 
+        onClick={(e)=>{
+            props.saved(e.target.name);
+            props.hideBtns();
+        }} 
+        type="submit">Saved Workouts</button>
         </div>
         </div>
 

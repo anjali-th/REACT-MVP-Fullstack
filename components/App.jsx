@@ -4,18 +4,24 @@ import Footer from "./Footer";
 import Body from "./Body";
 import Card from "./Card";
 
+
 function App(){
 
   const [ result, setResult] = useState([]);// API data
   const [ workoutType, setWorkoutType] = useState('upper');
+  const [isClicked, setIsClicked] = useState(false);
 
   function handleClick(type){
     setWorkoutType(() => type);
     apiRequest(type);
   }
 
+  function hideButtons(){
+    console.log('yo');
+    setIsClicked(prevVal=>!prevVal);
+  }
+
   function add(item){
-    console.log(JSON.stringify(item));
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -37,8 +43,8 @@ function App(){
   
   return (
     <div>
-      <Heading saved={handleClick}/>
-      <Body showCard={handleClick} />
+      <Heading saved={handleClick} hideBtns={hideButtons}/>
+      {!isClicked ? <Body showCard={handleClick}/> : null }
       <Card info={result} addWorkout={add}/>
       <Footer/>
     </div>

@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import Card from "./Card";
+import React from "react";
 
-function Body(props) {    
-
+function Body(props) {
   return (
     <div className="body">
       <div>
@@ -14,12 +12,20 @@ function Body(props) {
         >
           Upper Body
         </button>
-        <button className="body-btn" name="lower"
-          onClick={(e) => props.showCard(e.target.name)} type="submit">
+        <button
+          className="body-btn"
+          name="lower"
+          onClick={(e) => props.showCard(e.target.name)}
+          type="submit"
+        >
           Lower Body
         </button>
-        <button className="body-btn" name="full"
-          onClick={(e) => props.showCard(e.target.name)} type="submit">
+        <button
+          className="body-btn"
+          name="full"
+          onClick={(e) => props.showCard(e.target.name)}
+          type="submit"
+        >
           Full Body
         </button>
       </div>

@@ -17,7 +17,6 @@ function App(){
   }
 
   function hideButtons(){
-    console.log('yo');
     setIsClicked(prevVal=>!prevVal);
   }
 

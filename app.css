@@ -1,8 +1,16 @@
-
+body{
+  /* height: 100%; */
+  /* display: block; */
+}
 * {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .header{
@@ -11,9 +19,10 @@
   padding: 30px 0;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
+  margin-bottom: 5em;
 }
 
 .header h1{
@@ -30,6 +39,7 @@
 
 .menu button{
   font-size: 16px;
+  font-weight:900;
   padding: 8px 20px;
   margin: 0.5em;
   width: 8.5em;
@@ -37,19 +47,18 @@
 
 
 .body{
-  margin-top: 3em;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
-  /* position: relative; */
 }
 
 .body-btn{
-  font-size: 45px;
+  font-size: 40px;
   padding: 8px 20px;
-  margin: 5em 3em 1em 3em;
+  margin: 2em 3em 0em 2em;
+  border-radius: 25px;
 
 }
 
@@ -57,15 +66,34 @@
   border:none;
 }
 
+.card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
 .card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: rgb(235, 252, 252);
   transition: 0.3s;
   width: 40%;
   margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 1em;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1{
+  margin-bottom: 0em;
+  line-height: 1;;
+}
+
+.card p{
   font-size: large;
+  line-height:2;
+  margin-top: 0;
 }
 
 .footer{

@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 const date = new Date();
 const year  = date.getFullYear();
-// const year = date.currentYear();
 
 function Footer(){
     return <div className="footer">
